@@ -32,7 +32,7 @@ Key characteristics:
 
 - **Feature Engineering**: Used to normalize `Time` and `Amount` for better model performance.
 - **Resampling Techniques**: Addressed class imbalance through oversampling (e.g., SMOTE) or undersampling methods.
-- **Evaluation Metrics**: Focused on precision, recall, F1-score, and AUC-ROC to ensure accurate and actionable results.
+- **Evaluation Metrics**: The primary evaluation metric used to assess the performance of the Logistic Regression model was Accuracy. Accuracy measures the proportion of correct predictions made by the model out of all predictions.
 
 ## Technologies Used
 
@@ -54,25 +54,22 @@ Key characteristics:
    - Handled the severe class imbalance using SMOTE (Synthetic Minority Oversampling Technique).
 
 3. **Model Building**:
-   - Trained multiple machine learning models, including:
-     - Logistic Regression
-     - Random Forest
-     - Support Vector Machines (SVM)
-   - Used cross-validation to prevent overfitting and ensure generalization.
+   - **Model Selection:** Logistic Regression was chosen as the model for classification due to its simplicity and efficiency in binary and multiclass classification problems.
+   - **Training the Model:** The Logistic Regression model was trained using the training data (X_train, Y_train) using the fit() method. Despite encountering a convergence warning, the model training was carried out, and an optimal solution was found within the default iteration limit.
 
-4. **Evaluation**:
-   - Assessed performance using:
-     - Precision: Minimizing false positives.
-     - Recall: Maximizing detection of fraudulent transactions.
-     - F1-score: Balancing precision and recall.
-     - AUC-ROC: Ensuring the model is robust across different thresholds.
+5. **Evaluation**: Accuracy Calculation: The performance of the trained model was evaluated on both the training and testing datasets.
+Training Accuracy: Accuracy was calculated by comparing the predicted values on the training data (X_train) with the actual target values (Y_train).
+Test Accuracy: Accuracy was also computed for the testing dataset (X_test) by comparing predicted values with actual target values.
+
+6. **Accuracy Score:** The accuracy scores on both training and test data were calculated using accuracy_score. The accuracy on the training data was found to be approximately **94.79%**, and on the test data, it was **94.42%**. These results indicate that the model performed well and generalizes effectively to unseen data.
 
 ## Results
 
 The Logistic Regression model has been successfully trained and evaluated on the provided dataset. The accuracy results for both the training and testing data are as follows:
 
-**Accuracy on Training Data:** 94.79%
-**Accuracy on Test Data:** 94.42%
+  - **Accuracy on Training Data:** 94.79%
+
+  - **Accuracy on Test Data:** 94.42%
 
 These results indicate that the model performs well in predicting the target variable, with a relatively small difference between the training and test accuracy, suggesting good generalization.
 
@@ -102,19 +99,19 @@ These results indicate that the model performs well in predicting the target var
 
 There are several directions in which this project can be extended:
 
-**Hyperparameter Tuning:** Further improve the model's performance by experimenting with different solvers (e.g., liblinear, saga) and adjusting hyperparameters like C, max_iter, and others using techniques such as GridSearchCV or RandomizedSearchCV.
+  - **Hyperparameter Tuning:** Further improve the model's performance by experimenting with different solvers (e.g., liblinear, saga) and adjusting hyperparameters like C, max_iter, and others using techniques such as GridSearchCV or RandomizedSearchCV.
 
-**Data Preprocessing:** Scaling the data using techniques like Min-Max scaling or Standardization might improve the performance, especially if the features have varying scales.
+  - **Data Preprocessing:** Scaling the data using techniques like Min-Max scaling or Standardization might improve the performance, especially if the features have varying scales.
 
-**Feature Engineering:** Investigate the addition of new features or perform feature selection to improve model accuracy.
+  - **Feature Engineering:** Investigate the addition of new features or perform feature selection to improve model accuracy.
 
-**Use of Other Algorithms:** Try other machine learning models like Random Forests, Support Vector Machines (SVM), or XGBoost to compare and potentially enhance predictive performance.
+  - **Use of Other Algorithms:** Try other machine learning models like Random Forests, Support Vector Machines (SVM), or XGBoost to compare and potentially enhance predictive performance.
 
-**Model Deployment:** Deploy the model as a web application or integrate it into real-time systems for dynamic predictions.
+  - **Model Deployment:** Deploy the model as a web application or integrate it into real-time systems for dynamic predictions.
 
 ## Conclusions
 
-The Logistic Regression model has demonstrated robust performance with an accuracy score of around 94% on both the training and test datasets. This indicates that the model is able to generalize well to unseen data, suggesting that Logistic Regression is an appropriate algorithm for this task.
+The Logistic Regression model has demonstrated robust performance with an _**accuracy score of around 94% on both the training and test datasets**_. This indicates that the model is able to generalize well to unseen data, suggesting that Logistic Regression is an appropriate algorithm for this task.
 
 However, there is always room for improvement. Experimenting with different preprocessing techniques, hyperparameter tuning, and other machine learning algorithms could further enhance the model's predictive power.
 
