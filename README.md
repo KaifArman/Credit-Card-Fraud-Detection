@@ -69,15 +69,12 @@ Key characteristics:
 
 ## Results
 
-The models achieved the following performance metrics (example values):
+The Logistic Regression model has been successfully trained and evaluated on the provided dataset. The accuracy results for both the training and testing data are as follows:
 
-| Model               | Precision (%) | Recall (%) | F1-Score (%) | AUC-ROC (%) |
-|---------------------|---------------|------------|--------------|-------------|
-| Logistic Regression | 92.5          | 88.3       | 90.3         | 96.2        |
-| Random Forest       | 95.4          | 91.2       | 93.3         | 98.1        |
-| SVM                 | 91.8          | 87.5       | 89.6         | 96.0        |
+**Accuracy on Training Data:** 94.79%
+**Accuracy on Test Data:** 94.42%
 
-Random Forest emerged as the best-performing model with the highest AUC-ROC and F1-score.
+These results indicate that the model performs well in predicting the target variable, with a relatively small difference between the training and test accuracy, suggesting good generalization.
 
 ## How to Run
 
@@ -103,19 +100,23 @@ Random Forest emerged as the best-performing model with the highest AUC-ROC and 
 
 ## Future Scope
 
-- **Algorithm Optimization**:
-  - Experiment with advanced models like XGBoost or LightGBM.
-  - Perform hyperparameter tuning for better accuracy.
-- **Explainability**:
-  - Use SHAP or LIME to interpret the model’s decisions.
-- **Deployment**:
-  - Integrate the model into a real-time fraud detection system using Flask or FastAPI.
-- **Additional Features**:
-  - Include domain-specific features or external data for enhanced detection capabilities.
+There are several directions in which this project can be extended:
+
+**Hyperparameter Tuning:** Further improve the model's performance by experimenting with different solvers (e.g., liblinear, saga) and adjusting hyperparameters like C, max_iter, and others using techniques such as GridSearchCV or RandomizedSearchCV.
+
+**Data Preprocessing:** Scaling the data using techniques like Min-Max scaling or Standardization might improve the performance, especially if the features have varying scales.
+
+**Feature Engineering:** Investigate the addition of new features or perform feature selection to improve model accuracy.
+
+**Use of Other Algorithms:** Try other machine learning models like Random Forests, Support Vector Machines (SVM), or XGBoost to compare and potentially enhance predictive performance.
+
+**Model Deployment:** Deploy the model as a web application or integrate it into real-time systems for dynamic predictions.
 
 ## Conclusions
 
-This project demonstrates the power of machine learning in addressing the critical issue of credit card fraud. By handling class imbalance and rigorously evaluating models, it delivers a solution that is both practical and effective. The Random Forest model stood out for its accuracy and reliability. Future work can focus on deploying this model in a production environment and enhancing its interpretability for better stakeholder trust.
+The Logistic Regression model has demonstrated robust performance with an accuracy score of around 94% on both the training and test datasets. This indicates that the model is able to generalize well to unseen data, suggesting that Logistic Regression is an appropriate algorithm for this task.
+
+However, there is always room for improvement. Experimenting with different preprocessing techniques, hyperparameter tuning, and other machine learning algorithms could further enhance the model's predictive power.
 
 ## Acknowledgements
 
